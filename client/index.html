@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DowntimeDetective</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="search.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-heading-container">
+        <img id="logo" src="search.png" alt="" />
+        <h1>DowntimeDetective</h1>
+      </div>
+      <form id="statusForm">
+        <input
+          type="text"
+          id="urlInput"
+          placeholder="Enter website URL (e.g., https://example.com)"
+          required
+        />
+        <button type="submit" id="checkButton">
+          <span id="buttonText">Check Status</span>
+          <div id="loader" class="loader"></div>
+        </button>
+      </form>
+      <div id="statusResult"></div>
+
+      <div class="how-it-works">
+        <h2>How It Works</h2>
+        <p>
+          This tool checks the uptime/downtime status of any website. Simply
+          enter the URL of the website you want to check, and the application
+          will send a request to the backend to determine if the site is up or
+          down.
+        </p>
+        <p>
+          The backend processes the URL and returns the status, which is then
+          displayed here.
+        </p>
+        <p>
+          Note that this is not the most accurate way to check the status of a
+          website, this is a more general method that does not take into
+          consideration the vast variation among websites.
+        </p>
+      </div>
+
+      <footer>
+        <p>
+          Made with 🖤 by
+          <a href="https://github.com/flushthemoney" target="_blank"
+            >flushthemoney</a
+          >
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
