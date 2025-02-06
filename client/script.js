@@ -16,7 +16,11 @@ document
     buttonText.style.visibility = "hidden";
     loader.style.display = "block";
 
-    fetch(`http://localhost:8000/api/uptime?url=${encodeURIComponent(url)}`)
+    fetch(
+      `https://backend-dd.flushthemoney.com/api/uptime?url=${encodeURIComponent(
+        url
+      )}`
+    )
       .then((response) => response.json())
       .then((data) => {
         const statusResult = document.getElementById("statusResult");
